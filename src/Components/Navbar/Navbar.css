@@ -1,79 +1,214 @@
 .navbar{
-    padding: 20px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.navbar.logo{
-    width: 150px;
-}
-.navbar-menu{
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    color: #49557e;
-    font-size: 18px;
-}
-.navbar-right{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-.navbar button{
-    background: transparent;
-    font-size: 16px;
-    color: #49557e;
-    border: 1px solid tomato;
-    padding: 10px 30px;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.navbar button:hover{
-    background-color: #fff4f2;
-}
-.navbar .active{
-    padding-bottom: 2px;
-border-bottom: 2px solid #49557e;
-}
-.navbar li{
-    cursor: pointer;
-}
-.search-icon{
-    position: relative;
-}
-.search-icon .dot{
-    position: absolute;
-    min-width: 10px;
-    min-height: 10px;
-    background-color: tomato;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
+    width:100%;
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    background:#fff;
 }
 
-@media (max-width:900px){
-.navbar .logo{
-    width: 140px;
+.logo{
+    width:150px;
 }
+
 .navbar-menu{
-    gap: 15px;
-    font-size: 16px;
+    display:flex;
+    align-items:center;
+    gap:28px;
+    list-style:none;
 }
+
+.navbar-menu a{
+    text-decoration:none;
+    color:#49557e;
+    font-size:18px;
+    transition:.3s;
+}
+
+.navbar-menu a:hover{
+    color:tomato;
+}
+
+.navbar-menu .active{
+    padding-bottom:4px;
+    border-bottom:2px solid #49557e;
+}
+
 .navbar-right{
-    gap: 20px;
+    display:flex;
+    align-items:center;
+    gap:25px;
 }
+
 .navbar-right img{
-    width: 20px;
-}
-.navbar-right button{
-    padding: 7px 20px;
-    font-size: 15px;
-}
-}
-@media (max-width:750px){
-.navbar-menu{
-   display: none;
+    cursor:pointer;
 }
 
+.search-icon{
+    position:relative;
+}
+
+.search-icon .dot{
+    position:absolute;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:tomato;
+    top:-5px;
+    right:-5px;
+}
+
+.navbar button{
+    background:transparent;
+    border:1px solid tomato;
+    padding:10px 25px;
+    border-radius:40px;
+    color:#49557e;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.navbar button:hover{
+    background:#fff4f2;
+}
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#49557e;
+    cursor:pointer;
+}
+
+/* ---------------------- */
+/* Large Tablets */
+/* ---------------------- */
+
+@media(max-width:992px){
+
+.logo{
+    width:130px;
+}
+
+.navbar{
+    padding:18px 5%;
+}
+
+.navbar-menu{
+    gap:18px;
+}
+
+.navbar-menu a{
+    font-size:16px;
+}
+
+.navbar-right{
+    gap:18px;
+}
+
+.navbar button{
+    padding:8px 18px;
+}
+}
+
+/* ---------------------- */
+/* Tablets */
+/* ---------------------- */
+
+@media(max-width:768px){
+
+.menu-toggle{
+    display:block;
+}
+
+.navbar-menu{
+    position:absolute;
+    top:100%;
+    right:5%;
+    width:230px;
+    background:#fff;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    border-radius:10px;
+    display:none;
+    flex-direction:column;
+    align-items:flex-start;
+    padding:20px;
+    gap:20px;
+    z-index:1000;
+}
+
+.navbar-menu.active-menu{
+    display:flex;
+}
+
+.navbar-right button{
+    display:none;
+}
+
+.logo{
+    width:120px;
+}
+}
+
+/* ---------------------- */
+/* Mobile */
+/* ---------------------- */
+
+@media(max-width:480px){
+
+.navbar{
+    padding:15px;
+}
+
+.logo{
+    width:100px;
+}
+
+.navbar-right{
+    gap:12px;
+}
+
+.navbar-right img{
+    width:22px;
+}
+
+.menu-toggle{
+    font-size:24px;
+}
+
+.navbar-menu{
+    width:190px;
+    right:15px;
+}
+
+.navbar-menu a{
+    font-size:15px;
+}
+}
+
+/* ---------------------- */
+/* Very Small Phones */
+/* ---------------------- */
+
+@media(max-width:320px){
+
+.logo{
+    width:90px;
+}
+
+.navbar-right{
+    gap:8px;
+}
+
+.navbar-right img{
+    width:18px;
+}
+
+.menu-toggle{
+    font-size:20px;
+}
+
+.navbar-menu{
+    width:170px;
+}
 }
